@@ -1,0 +1,493 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"se",
+				"section	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "contact.html",
+			"settings":
+			{
+				"buffer_size": 2472,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/MANISH/Desktop/1.html",
+			"settings":
+			{
+				"buffer_size": 191,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "book.html",
+			"settings":
+			{
+				"buffer_size": 3501,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "book.css",
+			"settings":
+			{
+				"buffer_size": 1182,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "safety.html",
+			"settings":
+			{
+				"buffer_size": 2337,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "saftey.css",
+			"settings":
+			{
+				"buffer_size": 1222,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "new 1.css",
+			"settings":
+			{
+				"buffer_size": 1147,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n<script>\nfunction date_time(id)\n{\n        date = new Date;\n        year = date.getFullYear();\n        month = date.getMonth();\n        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');\n        d = date.getDate();\n        day = date.getDay();\n        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');\n        h = date.getHours();\n        if(h<10)\n        {\n                h = \"0\"+h;\n        }\n        m = date.getMinutes();\n        if(m<10)\n        {\n                m = \"0\"+m;\n        }\n\n        + /**/\n        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m;\n        document.getElementById(id).innerHTML = result;\n        setTimeout('date_time(\"'+id+'\");','1000');\n        return true;\n}\n</script>\n <script type=\"text/javascript\">\n    function formValidation()  \n    {  \n    var uid = document.registration.username; \n    var sid = document.registration.surname;  \n    var passid = document.registration.pwd;  \n    var dateo = document.registration.dob;  \n    var uemail = document.registration.email;\n    var telp = document.registration.tel;  \n    var addr = document.registration.add;  \n     \n   \n   if(username_validation(uid,5,12)) \n{ 3\n\n    \n     if(surnamename_validation(sid,5,12)) \n{ \n     \n    if(pwd_validation(passid,7,12))  \n    {  \n         if(dob_validation(dateo,8)) \n{ \n    \n     \n    if(ValidateEmail(uemail))  \n    {  \n         if(tel_validation(telp,10)) \n{ \n    if(allLetter(addr))  \n    {  \n    }   \n    }  \n    }   \n    } \n    }\n    }\n    } \n     \n    return false;  \n    }  \n function username_validation(uid,mx,my)  \n    {  \n    var uid_len = uid.value.length;  \n    if (uid_len == 0 || uid_len >= my || uid_len < mx)  \n    {  \n    alert(\"User should not be empty / length be between \"+mx+\" to \"+my);  \n     uid.focus();  \n     return false;  \n     }  \n     return true;  \n     }  \n\n function passid_validation(passid,mx,my)  \n    {  \n    var passid_len = passid.value.length;  \n    if (passid_len == 0 ||passid_len >= my || passid_len < mx)  \n    {   alert(\"Password should not be empty / length be between \"+mx+\" to \"+my);  \n    passid.focus();  \n    return false;  \n    }  \n    return true;  \n\n    } \n     function allLetter(uname)  \n    {   \n    var letters = /^[A-Za-z]+$/;  \n    if(uname.value.match(letters))  \n    {  \n    return true;  \n    }  \n    else  \n    {  \n    alert('Username must have alphabet characters only');  \n    uname.focus();  \n    return false;  \n    }  \n    }  \n    function ValidateEmail(uemail)  \n    {  \n    var mailformat = /^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/;  \n    if(uemail.value.match(mailformat))  \n    {  \n    return true;  \n    }  \n    else  \n    {  \n    alert(\"You have entered an invalid email address!\");  \n    uemail.focus();  \n    return false;  \n    }  \n    }  \n </script>  \n</head>\n<body >\n<link rel=\"stylesheet\" type=\"text/css\" href=\"new 1.css\">\n<body link=\"black\">\n\n<header>\n<a href=\"new 1.html\">\n<img src=\"images/contact.png\" align=\"right\" height=\"20px\" width=\"20px\" border=\"0\"></a>\n<a href=\"new 1.html\">\n<img src=\"images/sitemap.png\" align=\"right\" height=\"20px\" width=\"20px\" border=\"0\"></a>\n<a href=\"new 1.html\">\n<img src=\"images/home.png\" align=\"right\" height=\"20px\" width=\"20px\" border=\"0\"></a>\n<img src=\"images/logo.png\" align=\"left\"/><br><br>\n<h2>&nbsp&nbsp Fast,Frequent & Safe Flight</h2>\n            <span id=\"date_time\"></span>\n            <script type=\"text/javascript\" >window.onload = date_time('date_time');</script>\n \n</header>\n<div id=\"abhi\">\n    <form>\n User Id:<input type=\"userid\" name=\"userid\" />\n Password:<input type=\"password\" name=\"pwd\" />\n <input type=\"submit\" value=\"Login\" />\n</form>\n </div>\n<nav>\n<div id=\"main\">\n<div id=\"sa\"><a href=\"about1.html\">About</a></div>\n\n<div id=\"sd\"><a href=\"book.html\">Book</a></div>\n\n<div id=\"fg\"><a href=\"safety.html\">Safety</a></div>\n<div id=\"gh\"><a href=\"contact.html\">contact Us</a>\n</div>\n</div>\n</nav>\n\n<section>\n<div id=\"form1\">\n    <form name=\"registration\" onSubmit=\"return formValidation();\">\n<pre>\n<h3>           sign up</h3>\n     Username:<input type=\"text\" name=\"username\" />\n	 \n      Surname:<input type=\"text\" name=\"surname\" />\n	  \n     Password:<input type=\"password\" name=\"pwd\" />\n\nDate of Birth:<input type=\"text\" name=\"dob\" />\n\n        Email:<input type=\"text\" name=\"email\" />\n		\n    Telephone:<input type=\"text\" name=\"tel\" />\n	\n      Address:<input type=\"text\" name=\"add\" />\n	  \n                  <input type=\"submit\" value=\"Submit\"/>\n</pre>\n</form>\n</div>\n </section>\n<div id=\"footer\">\n\n\n</div>\n\n</body>\n</html>\n",
+			"file": "new 1.HTML",
+			"file_size": 4849,
+			"file_write_time": 131055235732251103,
+			"settings":
+			{
+				"buffer_size": 4666,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "about1.html",
+			"settings":
+			{
+				"buffer_size": 3464,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/MANISH/Desktop/PPPP/offer.html",
+		"/C/Users/MANISH/Desktop/PPPP/service.html",
+		"/H/alogin.html",
+		"/H/slogin.html",
+		"/C/Users/MANISH/Desktop/PPPP/saftey.css",
+		"/C/Users/MANISH/Desktop/PPPP/safety.html",
+		"/C/Users/MANISH/Desktop/airlines/safety.html"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "contact.html",
+					"settings":
+					{
+						"buffer_size": 2472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1677,
+								1677
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/MANISH/Desktop/1.html",
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "book.html",
+					"settings":
+					{
+						"buffer_size": 3501,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1834.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "book.css",
+					"settings":
+					{
+						"buffer_size": 1182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1122,
+								1122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 600.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "safety.html",
+					"settings":
+					{
+						"buffer_size": 2337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1677,
+								1677
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "saftey.css",
+					"settings":
+					{
+						"buffer_size": 1222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 492.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "new 1.css",
+					"settings":
+					{
+						"buffer_size": 1147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 817.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "new 1.HTML",
+					"settings":
+					{
+						"buffer_size": 4666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1338,
+								1338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "about1.html",
+					"settings":
+					{
+						"buffer_size": 3464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2204,
+								2204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

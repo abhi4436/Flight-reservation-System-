@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+var slideimages = new Array();
+slideimages[0] = new Image() ;
+slideimages[0].src = "images/3.png";
+slideimages[1] = new Image();
+slideimages[1].src = "images/ab.jpg";
+slideimages[2] = new Image();
+slideimages[2].src = "images/air.jpg";
+slideimages[3] = new Image();
+slideimages[3].src = "images/malaysia.jpg";
+slideimages[4] = new Image();
+slideimages[4].src = "images/we.jpg";
+slideimages[5] = new Image();
+slideimages[5].src = "images/indigo.jpg";
+slideimages[6] = new Image();
+slideimages[6].src = "images/s.jpg";
+
+</script>
+<script>
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        
+        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
+</script>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="about1.css">
+<header>
+<a href="new 1.html">
+<img src="images/contact.png" align="right" height="20px" width="20px" border="0"></a>
+<a href="new 1.html">
+<img src="images/sitemap.png" align="right" height="20px" width="20px" border="0"></a>
+<a href="new 1.html">
+<img src="images/home.png" align="right" height="20px" width="20px" border="0"></a>
+<img src="images/logo.png" align="left"/><br><br>
+<h2>&nbsp&nbsp Fast,Frequent & Safe Flight</h2>
+ <span id="date_time"></span>
+            <script type="text/javascript" >window.onload = date_time('date_time');</script>
+ 
+</header>
+<nav>
+<div id="main">
+<div id="sa"><a href="about1.html">About</a></div>
+
+<div id="sd"><a href="book.html">Book</a></div>
+
+<div id="fg"><a href="safety.html">Safety</a></div>
+<div id="gh"><a href="contact.html">contact Us</a>
+</div>
+</div>
+</nav>
+<section>
+<div id="abhi"><br><br><br><br>
+<img src="1.jpg" id="slide" width="600" height="350" />
+
+<div id="abhi1">
+<h2><font color="#3939ac">About Us<font></h2>
+
+<p>Nurtured from the seed of a single great idea - to empower the traveller - Air.com is going to pioneer the entire online travel industry in India. Air.com has revolutionised the travel industry over the years. This is the story of Air.com, India’s Online Travel Leader.</p>
+                  <p>Air.com, India’s leading online travel. Created to empower the Indian traveller with instant booking and comprehensive choices, the company began its journey in the US-India travel market. It aimed to offer a range of best-value products and services along with cutting-edge technology and dedicated round-the-clock customer support. </p>
+
+                  </div>
+				  </div>
+				  </section>
+
+<script type="text/javascript">
+
+
+var step=0
+
+function slideit(){
+
+ document.getElementById('slide').src = slideimages[step].src;
+ if (step<6)
+  step++;
+ else
+  step=0;
+ setTimeout("slideit()",2000);
+}
+
+slideit()
+
+</script>
+</section>
+<div id="footer">
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+
+        + /**/
+        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
+</script>
+ <script type="text/javascript">
+    function formValidation()  
+    {  
+    var uid = document.registration.username; 
+    var sid = document.registration.surname;  
+    var passid = document.registration.pwd;  
+    var dateo = document.registration.dob;  
+    var uemail = document.registration.email;
+    var telp = document.registration.tel;  
+    var addr = document.registration.add;  
+     
+   
+   if(username_validation(uid,5,12)) 
+{ 
+     if(surnamename_validation(sid,5,12)) 
+{ 
+     
+    if(pwd_validation(passid,7,12))  
+    {  
+         if(dob_validation(dateo,8)) 
+{ 
+    
+     
+    if(ValidateEmail(uemail))  
+    {  
+         if(tel_validation(telp,10)) 
+{ 
+    if(allLetter(addr))  
+    {  
+    }   
+    }  
+    }   
+    } 
+    }
+    }
+    } 
+     
+    return false;  
+    }  
+ function username_validation(uid,mx,my)  
+    {  
+    var uid_len = uid.value.length;  
+    if (uid_len == 0 || uid_len >= my || uid_len < mx)  
+    {  
+    alert("User should not be empty / length be between "+mx+" to "+my);  
+     uid.focus();  
+     return false;  
+     }  
+     return true;  
+     }  
+
+ function passid_validation(passid,mx,my)  
+    {  
+    var passid_len = passid.value.length;  
+    if (passid_len == 0 ||passid_len >= my || passid_len < mx)  
+    {   alert("Password should not be empty / length be between "+mx+" to "+my);  
+    passid.focus();  
+    return false;  
+    }  
+    return true;  
+
+    } 
+     function allLetter(uname)  
+    {   
+    var letters = /^[A-Za-z]+$/;  
+    if(uname.value.match(letters))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert('Username must have alphabet characters only');  
+    uname.focus();  
+    return false;  
+    }  
+    }  
+    function ValidateEmail(uemail)  
+    {  
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+    if(uemail.value.match(mailformat))  
+    {  
+    return true;  
+    }  
+    else  
+    {  
+    alert("You have entered an invalid email address!");  
+    uemail.focus();  
+    return false;  
+    }  
+    }  
+ </script>  
+</head>
+<body >
+<link rel="stylesheet" type="text/css" href="new 1.css">
+<body link="black">
+
+<header>
+<a href="new 1.html">
+<img src="images/contact.png" align="right" height="20px" width="20px" border="0"></a>
+<a href="new 1.html">
+<img src="images/sitemap.png" align="right" height="20px" width="20px" border="0"></a>
+<a href="new 1.html">
+<img src="images/home.png" align="right" height="20px" width="20px" border="0"></a>
+<img src="images/logo.png" align="left"/><br><br>
+<h2>&nbsp&nbsp Fast,Frequent & Safe Flight</h2>
+            <span id="date_time"></span>
+            <script type="text/javascript" >window.onload = date_time('date_time');</script>
+ 
+</header>
+<div id="abhi">
+    <form>
+ User Id:<input type="userid" name="userid" />
+ Password:<input type="password" name="pwd" />
+ <input type="submit" value="Login" />
+</form>
+ </div>
+<nav>
+<div id="main">
+<div id="sa"><a href="about1.html">About</a></div>
+
+<div id="sd"><a href="book.html">Book</a></div>
+
+<div id="fg"><a href="safety.html">Safety</a></div>
+<div id="gh"><a href="contact.html">contact Us</a>
+</div>
+</div>
+</nav>
+
+<section>
+<div id="form1">
+    <form name="registration" onSubmit="return formValidation();">
+<pre>
+<h3>           sign up</h3>
+     Username:<input type="text" name="username" />
+	 
+      Surname:<input type="text" name="surname" />
+	  
+     Password:<input type="password" name="pwd" />
+
+Date of Birth:<input type="text" name="dob" />
+
+        Email:<input type="text" name="email" />
+		
+    Telephone:<input type="text" name="tel" />
+	
+      Address:<input type="text" name="add" />
+	  
+                  <input type="submit" value="Submit"/>
+</pre>
+</form>
+</div>
+ </section>
+<div id="footer">
+
+
+</div>
+
+</body>
+</html>
